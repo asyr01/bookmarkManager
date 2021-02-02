@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+:root {
+  --primary-color: #7c59b0;
+  --border-radius: 5px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -5,6 +12,23 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #fcfaff;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23e33131' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: var(--primary-color);
+  font-family: 'Londrina Solid', cursive;
+}
+
+h1 {
+  color: #fff;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  width: 275px;
+  margin: 20px auto 10px;
+  user-select: none;
+}
+
+h1:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
