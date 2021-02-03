@@ -41,6 +41,7 @@ h1:hover {
 }
 
 .item {
+  position: relative;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: var(--border-radius);
@@ -69,10 +70,32 @@ h1:hover {
   border-bottom: dashed 3px orangered;
 }
 
+.fa-times-circle {
+  margin: 0;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.name {
+  margin-right: 20px;
+}
+
 .name img {
   height: 20px;
   width: 20px;
   vertical-align: sub;
   margin-right: 5px;
   margin-bottom: 2px;
+}
+
+/* Media Query: Large-Smartphones */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
