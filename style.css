@@ -51,3 +51,28 @@ h1:hover {
 .item:hover {
   background: rgba(0, 0, 0, 0.6);
 }
+
+.item a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item a:link,
+.item a:visited {
+  color: orangered;
+  text-decoration: none;
+}
+
+.item a:hover,
+.item a:active {
+  border-bottom: dashed 3px orangered;
+}
+
+.name img {
+  height: 20px;
+  width: 20px;
+  vertical-align: sub;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
