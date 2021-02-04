@@ -92,6 +92,30 @@ h1:hover {
   margin-bottom: 2px;
 }
 
+/* Modal */
+.modal-container {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.show-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  max-width: 95%;
+  width: 500px;
+}
+
 /* Media Query: Large-Smartphones */
 @media screen and (max-width: 600px) {
   .container {
