@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 
 :root {
-  --primary-color: #7c59b0;
+  --primary-color: #ee1750;
   --border-radius: 5px;
 }
 
@@ -61,13 +61,13 @@ h1:hover {
 
 .item a:link,
 .item a:visited {
-  color: orangered;
+  color: #fff;
   text-decoration: none;
 }
 
 .item a:hover,
 .item a:active {
-  border-bottom: dashed 3px orangered;
+  border-bottom: dashed 3px #fff;
 }
 
 .fa-times-circle {
