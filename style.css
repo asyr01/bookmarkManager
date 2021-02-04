@@ -168,6 +168,34 @@ h3 {
   outline: none;
 }
 
+.form-label {
+  color: var(--primary-color);
+  display: block;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+button {
+  cursor: pointer;
+  color: whitesmoke;
+  background: var(--primary-color);
+  height: 30px;
+  width: 200px;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+button:hover {
+  filter: hue-rotate(180deg);
+}
+
+button:focus {
+  outline: none;
+}
+
 /* Media Query: Large-Smartphones */
 @media screen and (max-width: 600px) {
   .container {
