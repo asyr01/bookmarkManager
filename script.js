@@ -34,7 +34,24 @@ function validate(nameValue, urlValue) {
     // Valid
     return true;
 }
- 
+
+// Fetch bookmarks
+function fetchBookmarks(){
+    // Get bookmarks from localStorage if available
+    if(localStorage.getItem('bookmarks')) {
+        bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    } else {
+        // Create bookmarks array in localStorage
+        bookmarks = [
+            {
+                name: 'Ali Sayar',
+                url: 'https://github.com/asyr01',
+            },
+        ];
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    }
+}
+
 // Handle data from form
 function storeBookmark(e) {
     e.preventDefault();
@@ -50,7 +67,10 @@ function storeBookmark(e) {
         name: nameValue,
         url: urlValue,
     };
-    bookmarks.push(bookmark)
+    bookmarks.push(bookmark);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks))
+    bookmarkForm.reset();
+    websiteNameEl.focus();
 }
 
 // Event Listener
