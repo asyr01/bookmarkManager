@@ -35,6 +35,15 @@ function validate(nameValue, urlValue) {
     return true;
 }
 
+// Build bookmarks in the DOM
+function buildBookmarks() {
+    // Build items
+    bookmarks.forEach((bookmark) => {
+      const { name, url} = bookmark;
+      
+    });
+}
+
 // Fetch bookmarks
 function fetchBookmarks(){
     // Get bookmarks from localStorage if available
@@ -50,6 +59,7 @@ function fetchBookmarks(){
         ];
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
+    buildBookmarks();
 }
 
 // Handle data from form
@@ -68,10 +78,14 @@ function storeBookmark(e) {
         url: urlValue,
     };
     bookmarks.push(bookmark);
-    localStorage.setItem('bookmarks', JSON.stringify(bookmarks))
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    fetchBookmarks();
     bookmarkForm.reset();
     websiteNameEl.focus();
 }
 
 // Event Listener
 bookmarkForm.addEventListener('submit', storeBookmark);
+
+// On Load, Fetch Bookmarks.
+   fetchBookmarks();
