@@ -113,7 +113,7 @@ function storeBookmark(e) {
         name: nameValue,
         url: urlValue,
     };
-    bookmarks.push(bookmark);
+    bookmarks[urlValue] = bookmark;
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     fetchBookmarks();
     bookmarkForm.reset();
