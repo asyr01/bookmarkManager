@@ -67,6 +67,11 @@ function buildBookmarks() {
     });
 }
 
+// Delete bookmark
+function deleteBookmark(url){
+    console.log('Delete Url', url);
+}
+
 // Fetch bookmarks
 function fetchBookmarks(){
     // Get bookmarks from localStorage if available
