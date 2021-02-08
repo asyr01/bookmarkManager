@@ -69,7 +69,11 @@ function buildBookmarks() {
 
 // Delete bookmark
 function deleteBookmark(url){
-    console.log('Delete Url', url);
+   bookmarks.forEach((bookmark, i) => {
+       if(bookmark.url === url) {
+          bookmarks.splice(i, 1);
+       }
+   })
 }
 
 // Fetch bookmarks
